@@ -3,7 +3,6 @@
 
 include 'connect.php';
 
-// Check database connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -14,7 +13,6 @@ if(isset($_POST['SignUp'])){
     $Password = isset($_POST['password']) ? $_POST['password'] : '';
     $PasswordHash = md5($Password);
 
-    // Use prepared statements to prevent SQL injection
     $checkEmail = $conn->prepare("SELECT * FROM users WHERE email = ?");
     $checkEmail->bind_param("s", $Email);
     $checkEmail->execute();
