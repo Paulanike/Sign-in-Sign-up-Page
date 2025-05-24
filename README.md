@@ -1,2 +1,2 @@
 # Sign-in-Sign-up-Page
-Create an account then Sign in working on real-time &amp; connected to phpMyAdmin 
+Create an account, then sign in, working in real-time because it is connected to phpMyAdmin.
